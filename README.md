@@ -22,7 +22,7 @@ News Guard is a cutting-edge, AI-powered misinformation detection platform desig
 
 ## 🛠 Tech Stack
 
-* **Frontend**: React 19, Tailwind CSS (v4), Lucide React (Icons), Motion/React (Animations), Cobe (3D interactive globe)
+* **Frontend**: React.js, Tailwind CSS (v4), Magic UI, Lucide React (Icons), Motion/React (Animations), Cobe (3D interactive globe)
 * **Build Tool**: Vite 8
 * **AI / Grounding**: Google Gemini API (`@google/generative-ai`)
 * **Dev Server Middleware**: Vite custom middleware handler for serverless API simulation
