@@ -1,11 +1,8 @@
 import "./App.css";
-import {RouterProvider, createBrowserRouter} from "react-router-dom";
-
+import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import AppLayout from "./layouts/app-layout";
-
 import LandingPage from "./pages/landing";
 import Dashboard from "./pages/dashboard";
-
 
 const router = createBrowserRouter([
   {
@@ -17,17 +14,14 @@ const router = createBrowserRouter([
       },
       {
         path: "/dashboard",
-        element: 
-            <Dashboard />      
+        element: <Dashboard />,
       },
     ],
   },
 ]);
 
 function App() {
-  return (
-      <RouterProvider router={router} />
-  );
+  return <RouterProvider router={router} />;
 }
 
 export default App;

@@ -95,16 +95,18 @@ export function Globe({
       },
     })
 
-    setTimeout(() => (canvasRef.current.style.opacity = "1"), 0)
+    setTimeout(() => {
+      if (canvasRef.current) canvasRef.current.style.opacity = "1";
+    }, 0);
     return () => {
-      globe.destroy()
-      window.removeEventListener("resize", onResize)
+      globe.destroy();
+      window.removeEventListener("resize", onResize);
     };
-  }, [rs, mergedConfig])
+  }, [rs, mergedConfig]);
 
   return (
     <div
-      className={cn("absolute inset-0 mx-auto aspect-square w-full max-w-150", className)}>
+      className={cn("relative mx-auto aspect-square w-full max-w-150", className)}>
       <canvas
         className={cn(
           "size-full opacity-0 transition-opacity duration-500 contain-[layout_paint_size]"
